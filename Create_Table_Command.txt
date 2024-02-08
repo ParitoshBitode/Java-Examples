@@ -1,0 +1,10 @@
+Table Creation
+
+First Table
+CREATE TABLE department (dep_id int primary key, dep_name varchar(20), dep_location varchar(15));
+
+Second Table
+CREATE TABLE salary_grade (grade int, min_salary int, max_salary int);
+
+Third Table
+CREATE TABLE employees (emp_id int primary key, emp_name varchar(15), job_name varchar(10), manager_id int, hire_date date, salary decimal(10,2), commission decimal(7,2), dep_id int, foreign key(dep_id) references department(dep_id));
